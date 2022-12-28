@@ -67,7 +67,18 @@ print(sid)
 
 ### api.submit.getAvailableLanguages
 
-获取一道题可用的语言。
+获取一道题可用的语言。返回值示例：
+
+```python
+[
+    ('4001', 'C (GCC 9.2.1)'),
+    ('4002', 'C (Clang 10.0.0)'),
+    ('4003', 'C++ (GCC 9.2.1)'),
+    ('4004', 'C++ (Clang 10.0.0)'),
+    ('4005', 'Java (OpenJDK 11.0.6)'),
+    ...
+] # [(语言编号, 语言名称)]
+```
 
 ### api.submit.get_submission_status
 
@@ -102,7 +113,7 @@ print(markdown)
 
 ### api.problem.get_html
 
-获取题面HTML。可利用`QWebEngineView.setHtml`进行渲染，默认包含加载数学公式的`<script>`。
+获取题面HTML，数学公式会由`latex2mathml`模块自动转换为mathml。
 
 ### api.contest.get_contest_problems
 
@@ -115,10 +126,10 @@ print(markdown)
     ('abc123_b', 'B', 'Five Dishes', '2 sec', '1024 MB'),
     ('abc123_c', 'C', 'Five Transportations', '2 sec', '1024 MB'),
     ('abc123_d', 'D', 'Cake 123', '2 sec', '1024 MB')
-] # (题目编号, 题目标题, 时间限制, 空间限制)
+] # [(题目编号, 题目标题, 时间限制, 空间限制)]
 ```
 
 ### Note
 
 - `api.utils`文件为部分API调用的辅助函数集合，**不要直接调用**。（`load_cookies`方法除外）
-- `api.solver`为自动解题功能，暂未实现，**请忽略此文件**。
+- “题目编号”指题目链接中的最后一部分，如 `abc123_a`（而不是 `A`）。

@@ -88,7 +88,7 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         automatic_release_tag: alpha
         prerelease: true
-        title: AtCoder Contest Helper
+        title: Development Build
         files: |
           ACHelper-win.exe
           ACHelper-mac.zip

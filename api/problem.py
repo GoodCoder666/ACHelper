@@ -99,4 +99,4 @@ def get_html(url: str, cookiejar: CookieJar=None) -> str:
     title_html = f'<h2>{title_pattern.search(html)[1]}</h2>'
     limits_html = f'<p>{limits_pattern.search(html)[1]}</p>'
     problem_html = problem_pattern.search(html)[1]
-    return title_html + '<hr/>' + limits_html + problem_html
+    return f'{title_html}<hr/>{limits_html}{problem_html}'

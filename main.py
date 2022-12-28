@@ -15,7 +15,7 @@ from dlgLogin import dlgLogin
 from submissionWatchThread import SubmissionWatchThread
 from ui_MainWindow import Ui_MainWindow
 
-__version__ = '0.3.1'
+__version__ = '0.3.2'
 app = QApplication(sys.argv)
 
 class ACHelperMainWindow(QMainWindow):
@@ -45,7 +45,7 @@ class ACHelperMainWindow(QMainWindow):
             self.cookiejar = load_cookies(self.cookies_path)
             self.ui.labCurrentUser.setText(f'当前用户：{get_username_from_cookiejar(self.cookiejar)}')
         else:
-            self.cookies_path = None
+            self.cookiejar = None
 
     @Slot()
     def on_actContest_Fetch_triggered(self):
