@@ -1,3 +1,5 @@
+**由于 AtCoder 近期加入的 Cloudflare 验证，ACHelper 已经无法正常使用，故仓库转入 Archive。见 [https://atcoder.jp/posts/1457](https://atcoder.jp/posts/1457)。**
+
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/GoodCoder666/ACHelper/pyinstaller.yml?branch=main) ![Python Version](https://img.shields.io/badge/Python%20Version-3.10-brightgreen)
 
 # AtCoder Contest Helper
